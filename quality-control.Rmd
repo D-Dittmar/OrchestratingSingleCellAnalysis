@@ -410,8 +410,8 @@ To demonstrate, we compute the average count across the discarded and retained p
 ```{r}
 # Using the 'discard' vector for demonstration purposes, 
 # as it has more cells for stable calculation of 'lost'.
-lost <- calculateAverage(counts(sce.416b)[,!discard])
-kept <- calculateAverage(counts(sce.416b)[,discard])
+lost <- calculateAverage(counts(sce.416b)[,discard])
+kept <- calculateAverage(counts(sce.416b)[,!discard])
 
 library(edgeR)
 logged <- cpm(cbind(lost, kept), log=TRUE, prior.count=2)
